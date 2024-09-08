@@ -1,0 +1,16 @@
+<h1>Contact Us</h1>
+
+<h2>Who do you wanna contact?</h2>
+<form action="/contact" method="get">
+  <label for="person">type a name...</label>
+  <input type="text" id="person" name="person" placeholder="Soojin" value="<%= params[:person] %>">
+  <input type="submit">
+</form>
+
+<ol>
+  <% @people.each do |person| %>
+  <li><%= person.capitalize %></li>
+  <% end %>
+</ol>
+
+<%= link_to 'Go Back Home', root_path %>
